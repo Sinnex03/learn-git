@@ -5,6 +5,7 @@ RUN \
  sudo wget -qO /etc/apt/trusted.gpg.d/kitware-key.asc https://apt.kitware.com/keys/kitware-archive-latest.asc \ 
  && echo "deb https://apt.kitware.com/ubuntu/ focal main" | sudo tee /etc/apt/sources.list.d/kitware.list \
  && sudo apt-get update \
+ && sudo apt-get install -y libopencv-dev \
  # need that to get add-apt-repository
  && sudo apt-get install -y software-properties-common \ 
  && sudo add-apt-repository -y ppa:system76/pop \
